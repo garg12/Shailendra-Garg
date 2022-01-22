@@ -1,0 +1,35 @@
+#Docker File Optimized by Splitting the Multi Build Layer For Maven 3.8 And Jdk 8.
+
+#
+# Maven Build stage
+#
+FROM maven:3.8-jdk-8 AS maven_build
+WORKDIR /app
+
+#copy pom
+COPY pom.xml .
+COPY src ./src
+#COPY src /home/app/src
+
+# build the app and download dependencies only when these are new (thanks to the cache)
+RUN --mount=type=cache,target=/root/.m2  mvn clean package -Dmaven.test.skip
+
+# split the built app into multiple layers to improve layer rebuild
+RUN mkdir -p target/docker-packaging && cd target/docker-packaging && jar -xf ../demo-1.0.0-SNAPSHOT*.jar
+
+########JRE run stage########
+#
+# Package stage
+#
+FROM openjdk:8-jdk
+WORKDIR /app
+#copy built app layer by layer
+ARG DOCKER_PACKAGING_DIR=/app/target/docker-packaging
+COPY --from=maven_build ${DOCKER_PACKAGING_DIR}/BOOT-INF/lib /app/lib
+COPY --from=maven_build ${DOCKER_PACKAGING_DIR}/BOOT-INF/classes /app/classes
+COPY --from=maven_build ${DOCKER_PACKAGING_DIR}/META-INF /app/META-INF
+
+#run the app or the 
+CMD java -cp .:classes:lib/* \
+         -Djava.security.egd=file:/dev/./urandom \
+         com.test.DemoApplication
