@@ -1,0 +1,35 @@
+Docker and Kubernetes Understanding Commands :
+          
+1. Docker :-
+
+a. docker --version (Validate if docker Installed Properly)
+b. docker (Validate Whether Docker Launched Properly)
+
+#Docker Images 
+c. docker pull image_name:tag (To Pull Any Existing Image from docker Hub)
+d. docker build —tag image_Name:Tag_name . (To Build the Image Manually)
+e. docker image ls (To See All the Existing Images of the Docker)
+f. docker image rm image_name/image_id (To Delete Any Image in the Docker)
+g. docker tag existing_img_name:existing_tag new_img_name:new_tag (To get the Copy of Existing Image)
+
+#Docker Containers
+h. docker run -d --name website -p target_port:image_port image_name:tag (To Launch the Image As Container)
+i. docker ps       (To get the list of All Docker Active Containers)
+j. docker ps -a    (To get the List of All Available Docker Conatainers)
+k. docker ps --format "table {{.Names}}\t{{.Ports}}\t{{.Image}}"  (To Modify Fields In Result)
+l. docker container ls (To get the list of All the containers )
+m. Docker run —name copy-container -p port_to_expose:image_port -d —volumes-from website image:tag (To get the Data Interaction between two Containers)
+n. docker exec -it container_id bash (To go inside the Container)
+o. docker stop container_id/container_name (To Stop the container)
+p. docker start container_id/container_name (To Start the container)
+q. docker rm container_id/container_name (To Remove Any Stopped Container)
+r. docker rm -f container_id/container_name (To Remove Any Container)
+
+#Inspect Containers and Debug
+s. docker inspect docker_id/docker_Name ( To Inspect the Docker Container)
+t. docker logs container_id (To get the Logs of Docker)
+
+#Login To Docker And Push Image to Docker Hub
+u. docker login (To Login)
+v. docker push image_Name:tag_Name (To Push Image to docker hub)
+w. docker pull image_Name:tag_Name (To Pull the docker image) 
