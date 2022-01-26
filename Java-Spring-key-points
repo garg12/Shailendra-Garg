@@ -1,0 +1,2 @@
+In Thread Start method will create a new thread and will execute whatever we have inside run method.
+But If we will call only Run method Than It will not create a new thread instead will call existing thread.
