@@ -1,2 +1,12 @@
 In Thread Start method will create a new thread and will execute whatever we have inside run method.
 But If we will call only Run method Than It will not create a new thread instead will call existing thread.
+
+#####Internal Working of ConCurrent HashMap
+Completable feature In java to manage the concurrent Thread. 
+
+#########Compare List and set for searching
+1. Sets are faster than list for searching. Because in List In worst Case we need to iterate till the last element but in set The location of the added element will be 
+the corresponding HAsh Value of the added element so During search the value will be fetched directly as per the hashkey of the element to be fetched and will get the result in 
+1 Time Complexity even in worst case.
+
+
