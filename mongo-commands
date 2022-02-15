@@ -72,5 +72,11 @@ db.lmsStateMachineState.update(
 	} }
 )
 
+###############Add a Field To Existing Mongo Collection ###################
+db.collection.update({},
+                          {$set : {"new_field":1}},
+                          {upsert:false,
+                          multi:true}) 
+
 
 
