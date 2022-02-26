@@ -10,3 +10,10 @@ the corresponding HAsh Value of the added element so During search the value wil
 1 Time Complexity even in worst case.
 
 
+######Map and SingletonMap ############
+a. Collections.Singleton map is much better by Memory and Developer perspective when we are in need to have only single key value pair in the map and in future we wouldn't
+need to modify or any other element in the map as put in this singleton Map Will throw UnSupoortedOperationException.
+b. But in the Simple Map we are free to use and add any element.
+c. SingletonMap has to contain two member fields: the key and the value, whereas a HashMap maintains an internal array of Node objects plus other member fields.So 
+To use these maps are really prudent choice to use these maps.
+
