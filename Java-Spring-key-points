@@ -31,4 +31,10 @@ b. It allows us to scan our Repository during classpath scanning.
 Transaction for readOnly=false.
 2. It Doesn't work since the previous transactional is being continued.
 3. @Transactional Annotation we used to have the transaction behaviour in our spring Annotation class or method.
+4. If propagation_Required is new in the transactions then inner transaction will be seaparate than the outer transaction and the behaviour for inner Transaction will
+be completely independent. 
 
+##### Transaction Management in Spring ########
+1. In It's default configuration, The Spring Framework Transaction Runtime Code Marks Only a Transaction for Roll Back Only in the case of RunTime Exception.
+2. Checked exceptions that are thrown from a transactional method do not result in rollback in the default configuration.
+3. We can configure exactly which Exception Type we want to mark Configure for roll back.
