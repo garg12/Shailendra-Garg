@@ -17,3 +17,13 @@ b. But in the Simple Map we are free to use and add any element.
 c. SingletonMap has to contain two member fields: the key and the value, whereas a HashMap maintains an internal array of Node objects plus other member fields.So 
 To use these maps are really prudent choice to use these maps.
 
+###### JPQL Query Spring ###########
+1. By Extending Repository<Entity, IndexId> in SPring Repository will help us by following way.
+a. It provide us the crud Methods to use for our Repository.
+b. It allows us to scan our Repository during classpath scanning.
+
+2. By Extending JPQL Query, Jpa Provides us the Much Flexible to have the Custom Query Like SQL to fetch the data for us from the database.
+3. So Any JPA Implementation Framework First will convert JPQL Query to SQL then will execute that on database.
+4. By Using @Query Annotation of JPA We can write our custom Query.
+
+#####################################
