@@ -30,3 +30,5 @@ b. It allows us to scan our Repository during classpath scanning.
 1. If inside the readOnly Transactions, we call any readOnly=false Transaction then it will flush and Save the Records in to database untill we will create the New 
 Transaction for readOnly=false.
 2. It Doesn't work since the previous transactional is being continued.
+3. @Transactional Annotation we used to have the transaction behaviour in our spring Annotation class or method.
+
