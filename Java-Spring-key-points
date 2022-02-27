@@ -26,4 +26,7 @@ b. It allows us to scan our Repository during classpath scanning.
 3. So Any JPA Implementation Framework First will convert JPQL Query to SQL then will execute that on database.
 4. By Using @Query Annotation of JPA We can write our custom Query.
 
-#####################################
+############ Transaction in Spring #########################
+1. If inside the readOnly Transactions, we call any readOnly=false Transaction then it will flush and Save the Records in to database untill we will create the New 
+Transaction for readOnly=false.
+2. It Doesn't work since the previous transactional is being continued.
