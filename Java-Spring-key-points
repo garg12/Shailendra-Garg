@@ -38,3 +38,6 @@ be completely independent.
 1. In It's default configuration, The Spring Framework Transaction Runtime Code Marks Only a Transaction for Roll Back Only in the case of RunTime Exception.
 2. Checked exceptions that are thrown from a transactional method do not result in rollback in the default configuration.
 3. We can configure exactly which Exception Type we want to mark Configure for roll back.
+
+########## Install Specifications Versions of Gradle ##########
+https://kodejava.org/how-do-i-install-gradle-in-os-x/
