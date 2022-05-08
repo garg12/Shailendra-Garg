@@ -41,3 +41,8 @@ be completely independent.
 
 ########## Install Specifications Versions of Gradle ##########
 https://kodejava.org/how-do-i-install-gradle-in-os-x/
+
+
+######Import Code Snippet For Specific Action #########
+1. Convert Integer Array to Array List :- 
+List<Integer> intList = Arrays.stream(arr).boxed().collect(Collectors.toList());
