@@ -49,3 +49,11 @@ List<Integer> intList = Arrays.stream(arr).boxed().collect(Collectors.toList());
 
 2. Make Various Groups of Rooms Based On Room Types using Streams.
 Map<String, List<Room>> roomsList= List.Stream().collect(Collectors.joining(Room:getRoomType));
+
+##Difference betweeb SQL Server Studio and Mysql
+1. Oracle supports star query optimization while SQL server doesn’t offer query optimization.
+2. In oracle, values do not change before commit whereas in SQL Server values are changed even before commit.
+3. Oracle allows rollback during the transaction process whereas SQL server doesn’t allow rollback in the transaction process.
+4. Oracle supports many “Schemas” with the instance whereas SQL server offers “Schemas” within each user database.
+5. Oracle allows database, full, file-level, incremental & differential backups on the other hand, SQL server allows full, partial, and incremental backups.
+6. Oracle uses both “after” and “before” triggers whereas SQL server mostly uses only “after” triggers.
