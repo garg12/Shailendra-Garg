@@ -57,3 +57,7 @@ Map<String, List<Room>> roomsList= List.Stream().collect(Collectors.joining(Room
 4. Oracle supports many “Schemas” with the instance whereas SQL server offers “Schemas” within each user database.
 5. Oracle allows database, full, file-level, incremental & differential backups on the other hand, SQL server allows full, partial, and incremental backups.
 6. Oracle uses both “after” and “before” triggers whereas SQL server mostly uses only “after” triggers.
+
+#######
+In Concurrent HashMap Locks Exists only on Writes so reading generally much faster but in Synchronized hashmap the Lock Exists both on reads and writes.
+So With synch. Hashmap Performance hits a lot.
