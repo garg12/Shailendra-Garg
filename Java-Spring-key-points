@@ -75,7 +75,12 @@ explicit catch block.
 1. To Do The Profiling and to know the memory leaks in the code we can have the profiling in the visual Studio Code.
 2. 
 
+############Postman_Enviornment_Variable_Set########################################
+1. To Set Env Variable Value from Response use below block in Test Section where sessionId is the Key in response Object and token is the env Variable:
+var jsonData = JSON.parse(responseBody);
+pm.environment.set("token", "Bearer "+jsonData["sessionId"]);
 
+2. 
 
 
 
