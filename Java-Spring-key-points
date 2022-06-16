@@ -61,3 +61,25 @@ Map<String, List<Room>> roomsList= List.Stream().collect(Collectors.joining(Room
 #######
 In Concurrent HashMap Locks Exists only on Writes so reading generally much faster but in Synchronized hashmap the Lock Exists both on reads and writes.
 So With synch. Hashmap Performance hits a lot.
+
+
+##########SprinBoot Exception Handling ###########################
+1. Spring Boot Global Exception Handler Catches the Exception to Handle only if we don't have any explicit catch block for this Exception. Otherwise it will be handled by
+explicit catch block.
+2. In Spring Boot we can have a Abstract Class As Spring Component and other Service Can be Autowired in it.
+3. In Spring Boot Jwt Token Filter Will Filter the Each Incoming Request and process that accordingly if it passes.
+
+**In Java Map We do have getOrDefault Method that can be used to get the values.
+
+############## Code Performance Check - Visual Studio Profiling ##############################
+1. To Do The Profiling and to know the memory leaks in the code we can have the profiling in the visual Studio Code.
+2. 
+
+
+
+
+
+
+
+
+
