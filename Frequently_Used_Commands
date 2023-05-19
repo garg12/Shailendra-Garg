@@ -2,3 +2,5 @@ Add this in run time argument
 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$VFLOW_HOME/logs/heapdump.bin 
 
 And install Eclipse Memory Analyzer Tool to understand the possible garbage collector instances. 
+1. modify the memoryAnalyzer.ini file and set space as around 2 times the size of heap dump file.
+2. modify under window > preferences > the checkbox to modify the sizes of Analysis and remove unreachable objects. 
