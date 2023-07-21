@@ -4,3 +4,10 @@ Add this in run time argument
 And install Eclipse Memory Analyzer Tool to understand the possible garbage collector instances. 
 1. modify the memoryAnalyzer.ini file and set space as around 2 times the size of heap dump file.
 2. modify under window > preferences > the checkbox to modify the sizes of Analysis and remove unreachable objects. 
+
+3. In Java If we need to execute any method that we need to close when application shuts down then we can proceed with the below method. 
+Runtime.getRuntime( ).addShutdownHook( new Thread( scheduleService :: shutdown ) );
+
+4. In Spring boot if we need to launch a method as soon as application starts, then can use commandLineRunner.
+5. 
+
